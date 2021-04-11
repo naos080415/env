@@ -1,0 +1,84 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+    "[tex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+    "[latex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+
+    "[bibtex]": {
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+
+
+    // ---------- LaTeX Workshop ----------
+
+    // 使用パッケージのコマンドや環境の補完を有効にする
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "platex",
+            "command": "platex",
+            "args":[
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-halt-on-error", 
+                "-file-line-error",
+                "-kanji=utf8",
+                "-shell-escape",
+                "%DOC%"
+            ],
+        },
+        {
+            "name": "dvipdfmx",
+            "command": "dvipdfmx",
+            "args": [
+              "%DOCFILE%.dvi"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "platex-dvipdfmx",
+            "tools": [
+                "platex",
+                "platex",
+                "dvipdfmx",
+            ]
+        },
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk",
+        "_minted*", "*.nav", "*.snm", "*.vrb",
+        "*.run.xml","*.dvi","*.bcf"
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.clean.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "explorer.confirmDelete": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "terminal.integrated.inheritEnv": false,
+    "python.dataScience.interactiveWindowMode": "perFile",
+    "explorer.confirmDragAndDrop": false,
+
+    "arduino.path": "/Applications/Arduino.app",
+    "arduino.commandPath": "Contents/MacOS/Arduino",
+    "arduino.additionalUrls": "",
+    "arduino.logLevel": "info",
+    "arduino.enableUSBDetection": true,
+    "arduino.disableTestingOpen": false,
+    "arduino.skipHeaderProvider": false,
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "arduino.defaultBaudRate": 9600,
+    "editor.minimap.enabled": false,
+    "git.autofetch": true,
+}
